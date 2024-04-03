@@ -1,58 +1,122 @@
-![gitthothtech](https://github.com/gubasssss/ThothTech/assets/143751785/8a017e66-ac88-4418-84a8-7ede5886ca25)
+![Banner ThothTech](https://github.com/gubasssss/ThothTech-2/assets/144804990/2032a256-b1df-4b57-836f-0d0903058e2e)
+
+<span id="topo">
+<p align="center">
+    <a href="#visao"> Visão geral </a> | 
+    <a href="#solucao">Solução proposta</a> |
+    <a href="#pj">Planejamento das Sprints</a> |  
+    <a href="#backlog">Backlog</a> | 
+    <a href="#sprint">Relatório das sprints</a> | 
+    <a href="#tecnologia">Tecnologias utilizadas</a> | 
+    <a href="#time">Time</a> | 
+
+
+    
+</p>
+<span id="visao">
+    
+<h2 aling="center"> 🔍Visão geral </h2>
+
+   
+ O projeto Chave de Ankh visa criar um sistema de chat inteligente que permitirá aos usuários realizar consultas em um banco de dados por meio de linguagem natural convertida em consultas SQL. A IA (Inteligência Artificial) integrada ao sistema será capaz de entender e interpretar as perguntas dos usuários, traduzindo-as para comandos SQL para recuperar informações relevantes do banco de dados.
+
+ 
+<span id="solucao">
+    
+<h2 aling="center">🎯Solução Proposta </h2>
+
+ Imagine um cliente que precisa extrair informações específicas de um banco de dados, mas não possui conhecimento técnico em SQL ou está enfrentando dificuldades para formular consultas precisas. O Chave de Ankh surge como uma resposta a essa necessidade, oferecendo um sistema de chat inteligente que permite aos usuários expressarem suas consultas em linguagem natural. Através de uma interface amigável e intuitiva, os usuários podem fazer perguntas como se estivessem conversando com um colega de trabalho, e o sistema traduz essas perguntas em consultas SQL para recuperar os dados desejados de forma eficiente e precisa.
+<span id="pj">
+    
+<h2 aling="center"> 🧩Planejamento das Sprints </h2>
+ 
+
+  <img src=""/>
+
+    
+</p>
+<span id="backlog">
+
+
+<h2 aling="center">📃Backlog do Produto </h2>
+
+| Sprint | Tarefas |  User Story   | Item |  Tempo Estimado   | Status   | Dificuldade | 
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 1 | 1 | test 1 | Wireframe |10h | :white_check_mark:   | 7 |
+| 1 | 2 | test 2 | Wireframe | 6h | :white_check_mark:| 5 |
+| 1 | 3 | test 3 | Wireframe | 5h | :white_check_mark:   | 7 |
+| 1 | 4 | test 4 | Wireframe | 4h | :white_check_mark:   | 4 |
+| 1 | 5 | test 5 | Backlog   | 3h |:white_check_mark:   | 5 |
+| 2 | 6 | test 6 | Website   | 15h| :white_check_mark:           |9 |
+| 2 | 7 | test 7| Website | 8h| :white_check_mark: |5|
+| 3 | 8 | test 8 | Website   | 6h | :white_check_mark:          | 7 |
+| 3 | 9 | test 9 | Website   | 8h | :white_check_mark:           | 8 |
+| 3 | 10 | test 10| Website   | 12h |:white_check_mark:          | 8 |
+| 3 | 11 | test 11| Website   | 10h |:white_check_mark:          | 9 |
+| 4 | 12 | test 12| Website   | 8h |:white_check_mark:           | 8 |
+| 4 | 13 | test 13| Website   | 2h |:white_check_mark:           | 4 |
+| 4 | 14 | test 14| Backlog	   | 8h |:white_check_mark:             | 5 |
+| 4 | 15 | test 15| Website   | 9h |:white_check_mark:            | 6 |
+
+<span id="sprint">
+    
+## 🧷Sprints
+
+
+ 
+ ### <a href="./Relatórios/Sprint 1.md">1️⃣SPRINT 1 - 14/04/2024</a>
+
+ ### <a href="./Relatórios/Sprint 2.md">2️⃣SPRINT 2 - 05/05/2024</a>
+
+ ### <a href="./Relatórios/Sprint 3.md">3️⃣SPRINT 3 - 26/05/2024</a>
+
+ ### <a href="./Relatórios/Sprint 4.md">4️⃣SPRINT 4 - 16/06/2024</a>
+
+
+<span id="tecnologia">
+    
+<h2 aling="center"> 💻Tecnologias Utilizadas</h2>
 
 
 
+* <p>
+      <img align="left" title="java-logo" height="30px" src="![58480979cef1014c0b5e4901 (1)](https://github.com/gubasssss/ThothTech-2/assets/144804990/edc49cde-c152-4cb9-8939-f2f2daebc1a1)
+"/>
+   Java 
+ </p>
 
+ * <p>
+       <img align="left" title="figma-logo" height="30px" src="https://user-images.githubusercontent.com/76211125/227502784-c94d5e2d-2e39-449b-ba85-053b9106b979.png"/>  Figma 
+ </p>
 
+ * <p>
+      <img align="left" title="github-dark" height="30px" src="https://user-images.githubusercontent.com/76211125/227561942-1503fb74-eb8e-41d1-936e-bf22bc2d70eb.png#gh-dark-mode-only"/>
+      <img align="left" title="github-light" height="30px" src="https://user-images.githubusercontent.com/76211125/227561896-a90cea71-7431-4908-ac8d-71fc02603eeb.png#gh-light-mode-only"/>
+     GitHub 
+ </p>
 
+  * <p>
+   <img align="left" title="mysql-logo" height="30px" src="![pngegg](https://github.com/gubasssss/ThothTech-2/assets/144804990/118bf4b2-e86e-47c5-bc2e-a43e9b98b228)"/>
+   MySQL
+ </p>
 
+   * <p>
+   <img align="left" title="lang-logo" height="30px" src="![lang-logo](https://github.com/gubasssss/ThothTech-2/assets/144804990/cebbc249-143b-4ae5-8bdb-2d4d86a77500)"/>
+   LangChain
+ </p>
 
+ * <p>
+   <img align="left" title="lm-studio" height="30px" src="![lm-logo](https://github.com/gubasssss/ThothTech-2/assets/144804990/826f3473-985d-4771-9444-34e07c46be85)"/>
+   LM Studio
+ </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ * <p>
+   <img align="left" title="vscode" height="30px" src="https://user-images.githubusercontent.com/76211125/227505063-5839c5e0-9524-41ff-9d24-ce6cbaf217a6.png"/>
+   Visual Studio Code 
+ </p>
+    
+## 🎓TIME
+<span id="time" width="100%" height="auto">
 
 
 |      Nome      |    Função       |                            Github                             |                           Linkedin                           |
