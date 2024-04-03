@@ -82,8 +82,7 @@
 
 
 * <p>
-      <img align="left" title="java-logo" height="30px" src="![58480979cef1014c0b5e4901 (1)](https://github.com/gubasssss/ThothTech-2/assets/144804990/edc49cde-c152-4cb9-8939-f2f2daebc1a1)
-"/>
+      <img align="left" title="java-logo" height="30px" src="https://github.com/gubasssss/ThothTech-2/blob/main/Chave%20de%20Ankh/static/java-logo.png"/>
    Java 
  </p>
 
@@ -93,22 +92,21 @@
 
  * <p>
       <img align="left" title="github-dark" height="30px" src="https://user-images.githubusercontent.com/76211125/227561942-1503fb74-eb8e-41d1-936e-bf22bc2d70eb.png#gh-dark-mode-only"/>
-      <img align="left" title="github-light" height="30px" src="https://user-images.githubusercontent.com/76211125/227561896-a90cea71-7431-4908-ac8d-71fc02603eeb.png#gh-light-mode-only"/>
      GitHub 
  </p>
 
-  * <p>
-   <img align="left" title="mysql-logo" height="30px" src="![pngegg](https://github.com/gubasssss/ThothTech-2/assets/144804990/118bf4b2-e86e-47c5-bc2e-a43e9b98b228)"/>
+ * <p>
+   <img align="left" title="mysql-logo" height="30px" src="https://github.com/gubasssss/ThothTech-2/blob/main/Chave%20de%20Ankh/static/pngegg.png"/>
    MySQL
  </p>
 
-   * <p>
-   <img align="left" title="lang-logo" height="30px" src="![lang-logo](https://github.com/gubasssss/ThothTech-2/assets/144804990/cebbc249-143b-4ae5-8bdb-2d4d86a77500)"/>
+ * <p>
+   <img align="left" title="lang-logo" height="30px" src="https://github.com/gubasssss/ThothTech-2/blob/main/Chave%20de%20Ankh/static/lang-logo.png"/>
    LangChain
  </p>
 
  * <p>
-   <img align="left" title="lm-studio" height="30px" src="![lm-logo](https://github.com/gubasssss/ThothTech-2/assets/144804990/826f3473-985d-4771-9444-34e07c46be85)"/>
+   <img align="left" title="lm-studio" height="30px" src="https://github.com/gubasssss/ThothTech-2/blob/main/Chave%20de%20Ankh/static/lm-logo.png"/>
    LM Studio
  </p>
 
