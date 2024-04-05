@@ -97,8 +97,8 @@
  </p>
 
  * <p>
-   <img align="left" title="lm-studio" height="30px" src="https://github.com/gubasssss/ThothTech-2/blob/main/Chave%20de%20Ankh/static/lm-logo.png"/>
-   LM Studio
+    <img align="left" title="vscode" height="30px" src="https://camo.githubusercontent.com/d1f8b9902e03d83c107b07a7194886dec1176f748afa6eeb425023ef0a4a6642/68747470733a2f2f6c6d73747564696f2e61692f6173736574732f616e64726f69642d6368726f6d652d353132783531322e706e67"/>
+   LM Studio 
  </p>
 
  * <p>
