@@ -87,8 +87,8 @@
  </p>
 
  * <p>
-   <img align="left" title="mysql-logo" height="30px" src="https://github.com/gubasssss/ThothTech-2/blob/main/Chave%20de%20Ankh/static/pngegg.png"/>
-   MySQL
+    <img align="left" title="vscode" height="30px" src="https://github.com/tandpfun/skill-icons/raw/main/icons/MySQL-Dark.svg"/>
+   MySQL 
  </p>
 
  * <p>
