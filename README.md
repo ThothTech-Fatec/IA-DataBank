@@ -1,6 +1,8 @@
-![Banner ThothTech (3)](https://github.com/gubasssss/ThothTech-2/assets/144804990/05bbc6e6-034a-4dd3-ab9c-1df604387ac7)
 
 <span id="topo">
+    
+![Banner ThothTech (3)](https://github.com/gubasssss/ThothTech-2/assets/144804990/05bbc6e6-034a-4dd3-ab9c-1df604387ac7)
+
 <p align="center">
     <a href="#visao"> Visão geral </a> | 
     <a href="#solucao">Solução proposta</a> |
