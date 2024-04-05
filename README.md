@@ -43,21 +43,13 @@
 
 | Sprint | Tarefas |  User Story   | Item |  Tempo Estimado   | Status   | Dificuldade | 
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
-| 1 | 1 | test 1 | Wireframe |10h | :white_check_mark:   | 7 |
-| 1 | 2 | test 2 | Wireframe | 6h | :white_check_mark:| 5 |
-| 1 | 3 | test 3 | Wireframe | 5h | :white_check_mark:   | 7 |
-| 1 | 4 | test 4 | Wireframe | 4h | :white_check_mark:   | 4 |
-| 1 | 5 | test 5 | Backlog   | 3h |:white_check_mark:   | 5 |
-| 2 | 6 | test 6 | Website   | 15h| :white_check_mark:           |9 |
-| 2 | 7 | test 7| Website | 8h| :white_check_mark: |5|
-| 3 | 8 | test 8 | Website   | 6h | :white_check_mark:          | 7 |
-| 3 | 9 | test 9 | Website   | 8h | :white_check_mark:           | 8 |
-| 3 | 10 | test 10| Website   | 12h |:white_check_mark:          | 8 |
-| 3 | 11 | test 11| Website   | 10h |:white_check_mark:          | 9 |
-| 4 | 12 | test 12| Website   | 8h |:white_check_mark:           | 8 |
-| 4 | 13 | test 13| Website   | 2h |:white_check_mark:           | 4 |
-| 4 | 14 | test 14| Backlog	   | 8h |:white_check_mark:             | 5 |
-| 4 | 15 | test 15| Website   | 9h |:white_check_mark:            | 6 |
+| 1 | 1 |Eu como cliente,quero uma visão inicial do projeto por meio de um protótipo navegável | Wireframe |10h |  ❌    | 5 |
+| 2 | 2 | Eu como cliente, desejo poder converter instruções em linguagem natural,para linguagem de máquina e obter as informações correspondentes do banco de dados. | Banco de Dados | 12h | ❌| 7 |
+| 2 | 3 |Eu como cliente,quero uma documentação que facilite e explique o chatbot criado| Backlog | 6h | ❌   | 4 |
+| 3 | 4 | Eu como cliente,	quero poder mudar e utilizar diferentes bancos de dados na interface do chatbot | Banco de Dados | 8h | ❌   | 8 |
+| 4 | 5 | Eu como cliente,quero uma interface limpa e fácil de ser utilizada | ChatBot   | 4h | ❌  | 6 |
+| 4 | 6 | Eu como cliente,quero poder utilizar outras opções de inteligência artificial dentro da interface do chatbot | ChatBot   | 9h| ❌          |9 |
+
 
 <span id="sprint">
     
