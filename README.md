@@ -6,7 +6,7 @@
 <p align="center">
     <a href="#visao"> Visão geral </a> | 
     <a href="#solucao">Solução proposta</a> |
-    <a href="#pj">Planejamento das Sprints</a> |  
+    <a href="#mvp">MVP</a> |  
     <a href="#backlog">Backlog</a> | 
     <a href="#sprint">Relatório das sprints</a> | 
     <a href="#tecnologia">Tecnologias utilizadas</a> | 
@@ -29,12 +29,13 @@
 <h2 aling="center">🎯Solução Proposta </h2>
 
  Imagine um cliente que precisa extrair informações específicas de um banco de dados, mas não possui conhecimento técnico em SQL ou está enfrentando dificuldades para formular consultas precisas. O Chave de Ankh surge como uma resposta a essa necessidade, oferecendo um sistema de chat inteligente que permite aos usuários expressarem suas consultas em linguagem natural. Através de uma interface amigável e intuitiva, os usuários podem fazer perguntas como se estivessem conversando com um colega de trabalho, e o sistema traduz essas perguntas em consultas SQL para recuperar os dados desejados de forma eficiente e precisa.
-<span id="pj">
+<span id="mvp">
     
-<h2 aling="center"> 🧩Planejamento das Sprints </h2>
- 
+<h2 aling="center"> 🧩MVP </h2>
 
-  <img src=""/>
+![MVP](https://github.com/gubasssss/ThothTech-2/assets/143751785/2ab4394d-2bfd-476c-8ce1-12b31a18ce41)
+
+ 
 
     
 </p>
