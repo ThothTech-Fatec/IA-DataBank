@@ -28,6 +28,14 @@ Nesta primeira Sprint o foco foi no desenvolvimento do wireframe para ter uma vi
 
 ## 📃Backlog da sprint
 
+<ul>
+<li>Estudos Sobre IA</li>
+<li>Estudos Sobre SQL</li>
+<li>Layout da Aplicação no Figma</li>
+
+
+</ul>
+
 
 ## 👨‍💻Trabalho desenvolvido
 
