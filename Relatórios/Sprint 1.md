@@ -39,3 +39,5 @@ Nesta primeira Sprint o foco foi no desenvolvimento do wireframe para ter uma vi
 
 ## 👨‍💻Trabalho desenvolvido
 
+https://github.com/gubasssss/ThothTech-2/assets/143751785/3280e7b4-c55d-43ab-96b6-4f8fb7cbf6ca
+
