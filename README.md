@@ -61,7 +61,7 @@
  
  ### <a href="./Relatórios/Sprint 1.md">1️⃣SPRINT 1 - 14/04/2024</a>
 
- ### 2️⃣SPRINT 2 - 05/05/2024</a>
+ ### <a href="./Relatórios/Sprint 2.md">2️⃣SPRINT 2 - 05/05/2024</a>
 
  ### 3️⃣SPRINT 3 - 26/05/2024</a>
 
