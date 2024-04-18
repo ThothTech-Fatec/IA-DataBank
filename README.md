@@ -46,12 +46,10 @@
 | Sprint | Tarefas |  User Story   | Item |  Tempo Estimado   | Status   | Dificuldade | 
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 | 1 | 1 |Eu como cliente,quero uma visão inicial do projeto por meio de um protótipo navegável | Wireframe |10h |  :white_check_mark:     | 5 |
-| 1 | 2 |Eu como cliente,quero uma documentação do projeto | Backlog |6h |  :white_check_mark:     | 3 |
-| 2 | 3 | Eu como cliente, desejo poder converter instruções em linguagem natural,para linguagem de máquina e obter as informações correspondentes do banco de dados. | Banco de Dados | 12h | ❌| 7 |
-| 2 | 4 |Eu como cliente,quero uma documentação que facilite e explique o chatbot criado,podendo ser utilizado como um tutorial| Backlog | 6h | ❌   | 4 |
-| 3 | 5 | Eu como cliente,	quero poder mudar e utilizar diferentes bancos de dados na interface do chatbot | Banco de Dados | 8h | ❌   | 8 |
-| 4 | 6 | Eu como cliente,quero uma interface limpa e fácil de ser utilizada | ChatBot   | 4h | ❌  | 6 |
-| 4 | 7 | Eu como cliente,quero poder utilizar outras opções de inteligência artificial dentro da interface do chatbot | ChatBot   | 9h| ❌          |9 |
+| 2 | 2 | Eu como cliente, desejo poder converter instruções em linguagem natural,para linguagem de máquina e obter as informações correspondentes do banco de dados. | Banco de Dados | 12h | ❌| 7 |
+| 3 | 3 | Eu como cliente,	quero poder mudar e utilizar diferentes bancos de dados na interface do chatbot | Banco de Dados | 8h | ❌   | 8 |
+| 4 | 4 | Eu como cliente,quero uma interface limpa e fácil de ser utilizada | ChatBot   | 4h | ❌  | 6 |
+| 4 | 5 | Eu como cliente,quero poder utilizar outras opções de inteligência artificial dentro da interface do chatbot | ChatBot   | 9h| ❌          |9 |
 
 
 <span id="sprint">
