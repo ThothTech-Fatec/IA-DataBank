@@ -9,6 +9,18 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
 public class ChaveDeAnkh {
+    
+        public static void main(String[] args) {
+        // Criar uma instância da tela e torná-la visível
+        ChatLanguageModel model = OllamaChatModel.builder()
+                .baseUrl("http://localhost:11434/")
+                .modelName("duckdb-nsql")
+                .temperature(0.8)
+                .build();
+        
+        Tela tela = new Tela(model);
+        tela.setVisible(true);
+    }
 
     private static final ChatLanguageModel model = OllamaChatModel.builder()
             .baseUrl("http://localhost:11434/")
@@ -23,18 +35,18 @@ public class ChaveDeAnkh {
                 + "username VARCHAR(45) NOT NULL,"
                 + "password VARCHAR(30) NOT NULL,"
                 + "email VARCHAR(60) NOT NULL"
-                + ");\n\n"
+                + ");"
                 + "CREATE TABLE pedidos ("
                 + "pedido_id INT AUTO_INCREMENT PRIMARY KEY,"
                 + "user_id INT NOT NULL,"
                 + "data_pedido DATE NOT NULL,"
                 + "FOREIGN KEY (user_id) REFERENCES users(user_id)"
-                + ");\n\n"
+                + ");"
                 + "CREATE TABLE produtos ("
                 + "produto_id INT AUTO_INCREMENT PRIMARY KEY,"
                 + "nome VARCHAR(100) NOT NULL,"
                 + "preco DECIMAL(10,2) NOT NULL"
-                + ");\n\n"
+                + ");"
                 + "CREATE TABLE itens_pedido ("
                 + "item_id INT AUTO_INCREMENT PRIMARY KEY,"
                 + "pedido_id INT NOT NULL,"
@@ -58,7 +70,7 @@ public class ChaveDeAnkh {
                 ResultSet resultSet = preparedStatement.executeQuery();
                 ResultSetMetaData metaData = resultSet.getMetaData();
                 int columnCount = metaData.getColumnCount();
-                StringBuilder resultBuilder = new StringBuilder("Resultados do Banco de Dados:\n");
+                StringBuilder resultBuilder = new StringBuilder("Chave De Ankh:\n");
                 while (resultSet.next()) {
                     for (int i = 1; i <= columnCount; i++) {
                         resultBuilder.append(metaData.getColumnName(i)).append(": ");
