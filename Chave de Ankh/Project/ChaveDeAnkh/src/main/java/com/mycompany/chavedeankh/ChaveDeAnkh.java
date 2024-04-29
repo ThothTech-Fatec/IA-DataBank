@@ -60,33 +60,40 @@ public class ChaveDeAnkh {
         System.out.println("Resposta: " + resposta);
 
         Connection connection = Conexao.getConnection();
-        if (connection != null) {
-            try {
-                String sqlQuery = resposta;
-                PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
+    if (connection != null) {
+        try {
+            String sqlQuery = resposta;
+            PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
 
-                System.out.println("SQL Query: " + sqlQuery);
+            System.out.println("SQL Query: " + sqlQuery);
 
-                ResultSet resultSet = preparedStatement.executeQuery();
-                ResultSetMetaData metaData = resultSet.getMetaData();
-                int columnCount = metaData.getColumnCount();
-                StringBuilder resultBuilder = new StringBuilder("Chave De Ankh:\n");
-                while (resultSet.next()) {
+            ResultSet resultSet = preparedStatement.executeQuery();
+            ResultSetMetaData metaData = resultSet.getMetaData();
+            int columnCount = metaData.getColumnCount();
+            StringBuilder resultBuilder = new StringBuilder("Chave De Ankh:\n");
+
+            // Verifica se o ResultSet está vazio
+            if (!resultSet.next()) {
+                tela.exibirResultado("Não foi possível realizar a consulta. Nenhum resultado encontrado.");
+            } else {
+                // Processa os resultados normalmente
+                do {
                     for (int i = 1; i <= columnCount; i++) {
                         resultBuilder.append(metaData.getColumnName(i)).append(": ");
                         resultBuilder.append(resultSet.getString(i)).append("\n");
                     }
                     resultBuilder.append("\n");
-                }
-
-                resultSet.close();
-                preparedStatement.close();
+                } while (resultSet.next());
                 tela.exibirResultado(resultBuilder.toString()); // Exibir resultados na tela
-            } catch (SQLException e) {
-                e.printStackTrace();
-            } finally {
-                Conexao.closeConnection();
             }
+
+            resultSet.close();
+            preparedStatement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            Conexao.closeConnection();
         }
+    }
     }
 }
