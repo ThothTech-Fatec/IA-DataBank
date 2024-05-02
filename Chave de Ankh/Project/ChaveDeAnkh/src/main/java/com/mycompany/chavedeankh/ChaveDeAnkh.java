@@ -9,20 +9,8 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
 public class ChaveDeAnkh {
-    
-        public static void main(String[] args) {
-        // Criar uma instância da tela e torná-la visível
-        ChatLanguageModel model = OllamaChatModel.builder()
-                .baseUrl("http://localhost:11434/")
-                .modelName("duckdb-nsql")
-                .temperature(0.8)
-                .build();
-        
-        Tela tela = new Tela(model);
-        tela.setVisible(true);
-    }
 
-    private static final ChatLanguageModel model = OllamaChatModel.builder()
+    public static final ChatLanguageModel model = OllamaChatModel.builder()
             .baseUrl("http://localhost:11434/")
             .modelName("duckdb-nsql")
             .temperature(0.8)
