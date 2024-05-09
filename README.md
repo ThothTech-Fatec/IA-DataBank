@@ -33,7 +33,8 @@
     
 <h2 aling="center"> 🧩MVP </h2>
 
-![MVP (2)](https://github.com/gubasssss/ThothTech-2/assets/144804990/1e2a86a7-b326-4274-99f4-5a450ee941e5)
+![MVP (2)](https://github.com/HenryBRG/ThothTech-2/assets/143751785/c12dbdce-ef3f-4600-94c9-9333d2096b03)
+
 
  
 
