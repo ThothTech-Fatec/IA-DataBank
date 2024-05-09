@@ -9,11 +9,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.ollama.OllamaChatModel;
-import javax.swing.text.SimpleAttributeSet;
-import javax.swing.text.StyleConstants;
-import javax.swing.text.StyledDocument;
-import javax.swing.text.BadLocationException;
-
+import javax.swing.ImageIcon;
+import java.awt.*;
 /**
  *
  * @author conta
@@ -29,6 +26,17 @@ public class Tela extends javax.swing.JFrame {
     public Tela(ChatLanguageModel model) {
         this.model = model; // Inicializar o campo model com o parâmetro do construtor
         initComponents();
+        
+        try {
+            ImageIcon imageAnkh = new ImageIcon("ankh.png");
+            Image originalimageAnkh = imageAnkh.getImage();
+            Image scaledimageAnkh = originalimageAnkh.getScaledInstance(40, 50, Image.SCALE_SMOOTH);
+            ImageIcon scalediconAnkh = new ImageIcon(scaledimageAnkh);
+            jLabel4.setIcon(scalediconAnkh);
+        }
+        catch (Exception ex){
+            JOptionPane.showMessageDialog(this, "Erro ao carregar a imagem: " + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+        }
     }
     
        
@@ -48,6 +56,8 @@ public class Tela extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         chatPanel = new javax.swing.JTextArea();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -83,8 +93,12 @@ public class Tela extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(135, 135, 135)
-                        .addComponent(jLabel1))
+                        .addGap(113, 113, 113)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel4)
+                        .addGap(66, 66, 66)
+                        .addComponent(jLabel2))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(21, 21, 21)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -99,7 +113,12 @@ public class Tela extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel4)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 365, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
@@ -133,15 +152,10 @@ public class Tela extends javax.swing.JFrame {
      */
     }
 public static void main(String args[]) {
-    ChatLanguageModel model = OllamaChatModel.builder()
-            .baseUrl("http://localhost:11434/")
-            .modelName("duckdb-nsql")
-            .temperature(0.8)
-            .build();
-
+    
     java.awt.EventQueue.invokeLater(new Runnable() {
         public void run() {
-            new Tela(model).setVisible(true);
+            new Tela(ChaveDeAnkh.model).setVisible(true);
         }
     });
 }
@@ -150,6 +164,8 @@ public static void main(String args[]) {
     private javax.swing.JTextArea chatPanel;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jTextField2;

@@ -9,20 +9,8 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
 public class ChaveDeAnkh {
-    
-        public static void main(String[] args) {
-        // Criar uma instância da tela e torná-la visível
-        ChatLanguageModel model = OllamaChatModel.builder()
-                .baseUrl("http://localhost:11434/")
-                .modelName("duckdb-nsql")
-                .temperature(0.8)
-                .build();
-        
-        Tela tela = new Tela(model);
-        tela.setVisible(true);
-    }
 
-    private static final ChatLanguageModel model = OllamaChatModel.builder()
+    public static final ChatLanguageModel model = OllamaChatModel.builder()
             .baseUrl("http://localhost:11434/")
             .modelName("duckdb-nsql")
             .temperature(0.8)
@@ -44,8 +32,8 @@ public class ChaveDeAnkh {
                 + ");"
                 + "CREATE TABLE produtos ("
                 + "produto_id INT AUTO_INCREMENT PRIMARY KEY,"
-                + "nome VARCHAR(100) NOT NULL,"
-                + "preco DECIMAL(10,2) NOT NULL"
+                + "produto_nome VARCHAR(100) NOT NULL,"
+                + "produto_preco DECIMAL(10,2) NOT NULL"
                 + ");"
                 + "CREATE TABLE itens_pedido ("
                 + "item_id INT AUTO_INCREMENT PRIMARY KEY,"
