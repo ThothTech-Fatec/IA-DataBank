@@ -4,31 +4,33 @@
  */
 package ImportBank;
 
-import dev.langchain4j.data.document.Document;
-import dev.langchain4j.data.document.loader.FileSystemDocumentLoader;
-
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 public class leitor {
-
+    static String abc = " ";
     public static void main(String[] args) {
-        Path filePath = toPath("C:\\Users\\Manhã\\Documents\\GitHub\\ThothTech-2\\Chave de Ankh\\Project\\ChaveDeAnkh\\Fafagamers.pdf");
-        Document document = FileSystemDocumentLoader.loadDocument(filePath);
-        System.out.println(document);
-    }
-    
-    private static Path toPath(String fileName) {
+        String filePath = "C:\\Users\\Manhã\\Documents\\GitHub\\ThothTech-2\\Chave de Ankh\\Project\\ChaveDeAnkh\\src\\main\\java\\ImportBank\\abb.sql";
+
+        // Criando um objeto File com o caminho do arquivo
+        File file = new File(filePath);
+
         try {
-            URL fileUrl = leitor.class.getResource(fileName); // Corrigindo a referência à classe
-            if (fileUrl == null) {
-                throw new IllegalArgumentException("O arquivo " + fileName + " não foi encontrado.");
+            // Criando um objeto Scanner para ler o arquivo
+            Scanner scanner = new Scanner(file);
+
+            // Lendo o arquivo linha por linha e imprimindo no console
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                abc = abc + line + "\n";
             }
-            return Paths.get(fileUrl.toURI());
-        } catch (URISyntaxException e) {
-            throw new RuntimeException(e);
+            System.out.println(abc);
+            // Fechando o scanner após a leitura
+            scanner.close();
+        } catch (FileNotFoundException e) {
+            // Tratando o caso em que o arquivo não é encontrado
+            System.out.println("O arquivo não foi encontrado: " + e.getMessage());
         }
     }
 }
@@ -36,6 +38,6 @@ public class leitor {
 
 /**
  *
- * @author Manhã
+ * @author Flavio
  */
 
