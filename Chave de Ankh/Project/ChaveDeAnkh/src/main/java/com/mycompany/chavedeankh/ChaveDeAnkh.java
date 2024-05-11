@@ -1,4 +1,5 @@
 package com.mycompany.chavedeankh;
+import ImportBank.leitor;
 
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.ollama.OllamaChatModel;
@@ -9,20 +10,8 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
 public class ChaveDeAnkh {
-    
-        public static void main(String[] args) {
-        // Criar uma instância da tela e torná-la visível
-        ChatLanguageModel model = OllamaChatModel.builder()
-                .baseUrl("http://localhost:11434/")
-                .modelName("duckdb-nsql")
-                .temperature(0.8)
-                .build();
-        
-        Tela tela = new Tela(model);
-        tela.setVisible(true);
-    }
 
-    private static final ChatLanguageModel model = OllamaChatModel.builder()
+    public static final ChatLanguageModel model = OllamaChatModel.builder()
             .baseUrl("http://localhost:11434/")
             .modelName("duckdb-nsql")
             .temperature(0.8)
@@ -47,7 +36,7 @@ public class ChaveDeAnkh {
                 + "nome VARCHAR(100) NOT NULL,"
                 + "preco DECIMAL(10,2) NOT NULL"
                 + ");"
-                + "CREATE TABLE itens_pedido ("
+                + "CREATE TABLE itens_pedidos ("
                 + "item_id INT AUTO_INCREMENT PRIMARY KEY,"
                 + "pedido_id INT NOT NULL,"
                 + "produto_id INT NOT NULL,"

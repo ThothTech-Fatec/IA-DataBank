@@ -33,7 +33,8 @@
     
 <h2 aling="center"> 🧩MVP </h2>
 
-![MVP (2)](https://github.com/gubasssss/ThothTech-2/assets/144804990/1e2a86a7-b326-4274-99f4-5a450ee941e5)
+![MVP (2)](https://github.com/HenryBRG/ThothTech-2/assets/143751785/c12dbdce-ef3f-4600-94c9-9333d2096b03)
+
 
  
 
@@ -46,9 +47,9 @@
 
 | Sprint | Tarefas |  User Story   | Item |  Tempo Estimado   | Status   | Dificuldade | 
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
-| 1 | 1 |Eu como cliente,quero uma visão inicial do projeto por meio de um protótipo navegável | Wireframe |10h |  :white_check_mark:     | 5 |
-| 2 | 2 | Eu como cliente, desejo poder converter instruções em linguagem natural,para linguagem de máquina e obter as informações correspondentes do banco de dados. | Banco de Dados | 12h | ❌| 7 |
-| 3 | 3 | Eu como cliente,	quero poder mudar e utilizar diferentes bancos de dados na interface do chatbot | Banco de Dados | 8h | ❌   | 8 |
+| 2 | 2 | Eu como cliente, desejo poder converter instruções em linguagem natural,para linguagem de máquina e obter as informações correspondentes do banco de dados. | Banco de Dados | 12h | :white_check_mark:| 7 |
+| 2 | 2 | Eu como cliente, quero uma interface já utilizavel no ChatBot. | ChatBot | 8h | :white_check_mark:| 5 |
+| 3 | 3 | Eu como cliente,	quero poder mudar e utilizar diferentes bancos de dados na interface do chatbot | Banco de Dados | 7h | ❌   | 8 |
 | 4 | 4 | Eu como cliente,quero uma interface limpa e fácil de ser utilizada | ChatBot   | 4h | ❌  | 6 |
 | 4 | 5 | Eu como cliente,quero poder utilizar outras opções de inteligência artificial dentro da interface do chatbot | ChatBot   | 9h| ❌          |9 |
 
@@ -63,7 +64,7 @@
 
  ### <a href="./Relatórios/Sprint 2.md">2️⃣SPRINT 2 - 05/05/2024</a>
 
- ### 3️⃣SPRINT 3 - 26/05/2024</a>
+ ### <a href="./Relatórios/Sprint 3.md"> 3️⃣SPRINT 3 - 26/05/2024</a>
 
  ### 4️⃣SPRINT 4 - 16/06/2024</a>
 

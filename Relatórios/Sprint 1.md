@@ -36,6 +36,9 @@ Nesta primeira Sprint o foco foi no desenvolvimento do wireframe para ter uma vi
 
 </ul>
 
+## 👓Sprint Review
+[Apresentação Sprint 1](https://github.com/gubasssss/ThothTech/files/15256237/Thoth.Tech.Sprint.1.2.pdf)
+
 
 ## 👨‍💻Trabalho desenvolvido
 
