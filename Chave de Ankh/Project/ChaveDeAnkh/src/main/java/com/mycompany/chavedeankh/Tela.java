@@ -11,34 +11,40 @@ import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.ollama.OllamaChatModel;
 import javax.swing.ImageIcon;
 import java.awt.*;
+
 /**
  *
  * @author conta
  */
 public class Tela extends javax.swing.JFrame {
+
     
     /**
      * Creates new form Tela_Ankh
      */
-    
-    private final ChatLanguageModel model;
-    
+   
+ 
+    private final ChatLanguageModel model; // Adicionando o campo model à classe Tela
+
+    /**
+     * Construtor da classe Tela.
+     * @param model O modelo de linguagem de chat a ser utilizado.
+     */
     public Tela(ChatLanguageModel model) {
+
         this.model = model; // Inicializar o campo model com o parâmetro do construtor
         initComponents();
-        
+
         try {
             ImageIcon imageAnkh = new ImageIcon("ankh.png");
             Image originalimageAnkh = imageAnkh.getImage();
             Image scaledimageAnkh = originalimageAnkh.getScaledInstance(40, 50, Image.SCALE_SMOOTH);
             ImageIcon scalediconAnkh = new ImageIcon(scaledimageAnkh);
             jLabel4.setIcon(scalediconAnkh);
-        }
-        catch (Exception ex){
+        } catch (Exception ex) {
             JOptionPane.showMessageDialog(this, "Erro ao carregar a imagem: " + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
         }
     }
-    
        
      
     /**
