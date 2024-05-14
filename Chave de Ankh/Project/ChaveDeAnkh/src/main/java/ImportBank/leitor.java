@@ -7,25 +7,30 @@ package ImportBank;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import javax.swing.JFileChooser;
+import com.mycompany.chavedeankh.Inicial;
 
 public class leitor {
-    static String abc = " ";
+public static String bankh = " ";
+    public static String ankh;
+
     public static void main(String[] args) {
-        String filePath = "C:\\Users\\Manhã\\Documents\\GitHub\\ThothTech-2\\Chave de Ankh\\Project\\ChaveDeAnkh\\src\\main\\java\\ImportBank\\abb.sql";
+        // Aqui você pode chamar o método processFile e passar o arquivo selecionado como parâmetro
+    }
 
-        // Criando um objeto File com o caminho do arquivo
-        File file = new File(filePath);
-
+    // Este método recebe um arquivo como parâmetro e processa seu conteúdo
+    public static void processFile(File file) {
         try {
             // Criando um objeto Scanner para ler o arquivo
             Scanner scanner = new Scanner(file);
 
-            // Lendo o arquivo linha por linha e imprimindo no console
+            // Lendo o arquivo linha por linha e armazenando seu conteúdo na variável bankh
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
-                abc = abc + line + "\n";
+                bankh = bankh + line + "\n";
             }
-            System.out.println(abc);
+           
+            
             // Fechando o scanner após a leitura
             scanner.close();
         } catch (FileNotFoundException e) {
@@ -34,6 +39,7 @@ public class leitor {
         }
     }
 }
+
 
 
 /**

@@ -18,32 +18,9 @@ public class ChaveDeAnkh {
             .build();
 
     public static void processarMensagem(String message, Tela tela) {
-        String schemaDefinition = "Provided this schema:\n\n"
-                + "CREATE TABLE users ("
-                + "user_id INT AUTO_INCREMENT PRIMARY KEY,"
-                + "username VARCHAR(45) NOT NULL,"
-                + "password VARCHAR(30) NOT NULL,"
-                + "email VARCHAR(60) NOT NULL"
-                + ");"
-                + "CREATE TABLE pedidos ("
-                + "pedido_id INT AUTO_INCREMENT PRIMARY KEY,"
-                + "user_id INT NOT NULL,"
-                + "data_pedido DATE NOT NULL,"
-                + "FOREIGN KEY (user_id) REFERENCES users(user_id)"
-                + ");"
-                + "CREATE TABLE produtos ("
-                + "produto_id INT AUTO_INCREMENT PRIMARY KEY,"
-                + "nome VARCHAR(100) NOT NULL,"
-                + "preco DECIMAL(10,2) NOT NULL"
-                + ");"
-                + "CREATE TABLE itens_pedidos ("
-                + "item_id INT AUTO_INCREMENT PRIMARY KEY,"
-                + "pedido_id INT NOT NULL,"
-                + "produto_id INT NOT NULL,"
-                + "quantidade INT NOT NULL,"
-                + "FOREIGN KEY (pedido_id) REFERENCES pedidos(pedido_id),"
-                + "FOREIGN KEY (produto_id) REFERENCES produtos(produto_id)"
-                + ");";
+        String schemaDefinition = """
+                                  Here is the database schema that the SQL query will run on: """ + leitor.bankh;
+
 
         String resposta = model.generate(schemaDefinition + " " + message);
         System.out.println("Resposta: " + resposta);
