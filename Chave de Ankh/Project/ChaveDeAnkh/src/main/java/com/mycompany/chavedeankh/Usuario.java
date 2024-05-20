@@ -12,7 +12,14 @@ public class Usuario {
     String bankname;
     String usuario;
     String senha;
-    
+  
+public Usuario(){}
+
+public Usuario (String bankname, String usuario, String senha){
+    this.bankname = bankname;
+    this.usuario = usuario;
+    this.senha = senha;
+}
     public String getBankname(){
         return bankname;
  }

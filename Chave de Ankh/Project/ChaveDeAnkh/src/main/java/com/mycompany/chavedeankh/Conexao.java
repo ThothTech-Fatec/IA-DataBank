@@ -1,29 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.chavedeankh;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- *
- * @author conta
- */
 public class Conexao {
-    private static final String URL = Data.URL;
-    private static final String USER = Data.USER;
-    private static final String PASSWORD = Data.PASSWORD;
-    private static Connection connection;
+    private Connection connection;
     
-    public static Connection getConnection() {
+    public Conexao(Usuario usuario) {
         try {
             // Registering the MySQL JDBC Driver
             Class.forName("com.mysql.cj.jdbc.Driver");
             // Opening database connection to MySQL server
-            connection = DriverManager.getConnection(URL, USER, PASSWORD);
+            String url = "jdbc:mysql://localhost:3306/" + usuario.getBankname();
+            String user = usuario.getUsuario();
+            String password = usuario.getSenha();
+            connection = DriverManager.getConnection(url, user, password);
         } catch (SQLException e) {
             System.out.println("Connection Failed! Check output console");
             e.printStackTrace();
@@ -31,10 +23,13 @@ public class Conexao {
             System.out.println("MySQL JDBC Driver not found!");
             e.printStackTrace();
         }
+    }
+
+    public Connection getConnection() {
         return connection;
     }
 
-    public static void closeConnection() {
+    public void closeConnection() {
         try {
             if (connection != null && !connection.isClosed()) {
                 connection.close();

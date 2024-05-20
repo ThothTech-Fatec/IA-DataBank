@@ -25,14 +25,15 @@ public class Tela extends javax.swing.JFrame {
    
  
     private final ChatLanguageModel model; // Adicionando o campo model à classe Tela
-
+    private final Usuario usuario;
     /**
      * Construtor da classe Tela.
      * @param model O modelo de linguagem de chat a ser utilizado.
      */
-    public Tela(ChatLanguageModel model) {
+    public Tela(ChatLanguageModel model, Usuario usuario) {
 
-        this.model = model; // Inicializar o campo model com o parâmetro do construtor
+        this.model = model;
+        this.usuario = usuario;
         initComponents();
 
         try {
@@ -148,7 +149,7 @@ public class Tela extends javax.swing.JFrame {
     jTextField2.setText(""); // Limpa o campo de entrada
 
     // Chama o método que processa a mensagem após adicionar a mensagem do usuário
-    ChaveDeAnkh.processarMensagem(message, this); // Passando a instância da tela como segundo argumento
+    ChaveDeAnkh.processarMensagem(message, this, usuario); // Passando a instância da tela como segundo argumento
 
     }//GEN-LAST:event_jButton1ActionPerformed
     public void exibirResultado(String resultado) {
@@ -161,8 +162,9 @@ public static void main(String args[]) {
     
     java.awt.EventQueue.invokeLater(new Runnable() {
         public void run() {
-            new Tela(ChaveDeAnkh.model).setVisible(true);
-        }
+                Usuario usuario = new Usuario(); // Inicialize o usuário conforme necessário
+                new Tela(ChaveDeAnkh.model, usuario).setVisible(true);
+            }
     });
 }
 
