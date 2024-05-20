@@ -1,6 +1,6 @@
 package com.mycompany.chavedeankh;
-import ImportBank.leitor;
 
+import ImportBank.leitor;
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.ollama.OllamaChatModel;
 import java.sql.Connection;
@@ -17,50 +17,48 @@ public class ChaveDeAnkh {
             .temperature(0.8)
             .build();
 
-    public static void processarMensagem(String message, Tela tela) {
+    public static void processarMensagem(String message, Tela tela, Usuario usuario) {
         String schemaDefinition = """
                                   Here is the database schema that the SQL query will run on: """ + leitor.bankh;
-
 
         String resposta = model.generate(schemaDefinition + " " + message);
         System.out.println("Resposta: " + resposta);
 
-        Connection connection = Conexao.getConnection();
-    if (connection != null) {
-        try {
-            String sqlQuery = resposta;
-            PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
+        Conexao conexao = new Conexao(usuario);
+        Connection connection = conexao.getConnection();
 
-            System.out.println("SQL Query: " + sqlQuery);
+        if (connection != null) {
+            try {
+                String sqlQuery = resposta;
+                PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
 
-            ResultSet resultSet = preparedStatement.executeQuery();
-            ResultSetMetaData metaData = resultSet.getMetaData();
-            int columnCount = metaData.getColumnCount();
-            StringBuilder resultBuilder = new StringBuilder("Chave De Ankh:\n");
+                System.out.println("SQL Query: " + sqlQuery);
 
-            // Verifica se o ResultSet está vazio
-            if (!resultSet.next()) {
-                tela.exibirResultado("Não foi possível realizar a consulta. Nenhum resultado encontrado.");
-            } else {
-                // Processa os resultados normalmente
-                do {
-                    for (int i = 1; i <= columnCount; i++) {
-                        resultBuilder.append(metaData.getColumnName(i)).append(": ");
-                        resultBuilder.append(resultSet.getString(i)).append("\n");
-                    }
-                    resultBuilder.append("\n");
-                } while (resultSet.next());
-                tela.exibirResultado(resultBuilder.toString()); // Exibir resultados na tela
+                ResultSet resultSet = preparedStatement.executeQuery();
+                ResultSetMetaData metaData = resultSet.getMetaData();
+                int columnCount = metaData.getColumnCount();
+                StringBuilder resultBuilder = new StringBuilder("Chave De Ankh:\n");
+
+                if (!resultSet.next()) {
+                    tela.exibirResultado("Não foi possível realizar a consulta. Nenhum resultado encontrado.");
+                } else {
+                    do {
+                        for (int i = 1; i <= columnCount; i++) {
+                            resultBuilder.append(metaData.getColumnName(i)).append(": ");
+                            resultBuilder.append(resultSet.getString(i)).append("\n");
+                        }
+                        resultBuilder.append("\n");
+                    } while (resultSet.next());
+                    tela.exibirResultado(resultBuilder.toString()); 
+                }
+
+                resultSet.close();
+                preparedStatement.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } finally {
+                conexao.closeConnection();
             }
-
-            resultSet.close();
-            preparedStatement.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            Conexao.closeConnection();
         }
     }
-    }
-    
 }
