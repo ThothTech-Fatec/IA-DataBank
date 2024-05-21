@@ -12,6 +12,8 @@ import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.ollama.OllamaChatModel;
 import java.sql.Connection;
 import javax.swing.JOptionPane;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 
 /**
  *
@@ -27,6 +29,18 @@ public class Inicial extends javax.swing.JFrame {
     public Inicial() {
     
         initComponents();
+        
+        // O Código abaixo foi desenvolvido por: Gustavo Braga, com o objetivo de centralizar as telas da aplicação em qualquer dispositivo.
+        
+        // Obtém o tamanho da tela
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+    
+        // Calcula as coordenadas x e y para centralizar a janela na tela
+            int x = (screenSize.width - getWidth()) / 2;
+            int y = (screenSize.height - getHeight()) / 2;
+    
+        // Define a posição da janela
+        setLocation(x, y);
     }
 
     /**

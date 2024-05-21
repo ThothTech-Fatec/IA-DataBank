@@ -13,16 +13,17 @@ public class ChaveDeAnkh {
 
     public static final ChatLanguageModel model = OllamaChatModel.builder()
             .baseUrl("http://localhost:11434/")
-            .modelName("duckdb-nsql")
+            .modelName("llama3")
             .temperature(0.8)
             .build();
 
     public static void processarMensagem(String message, Tela tela, Usuario usuario) {
         String schemaDefinition = """
-                                  Here is the database schema that the SQL query will run on: """ + leitor.bankh;
+                                  Please respond only using SQL queries. Do not use natural language in your responses and do not use "```".  """ + leitor.bankh;
 
-        String resposta = model.generate(schemaDefinition + " " + message);
-        System.out.println("Resposta: " + resposta);
+        String resposta1 = model.generate(schemaDefinition + " " + message);
+        System.out.println("Resposta: " + resposta1);
+        String resposta = resposta1.replace("```", "");
 
         Conexao conexao = new Conexao(usuario);
         Connection connection = conexao.getConnection();
@@ -30,6 +31,8 @@ public class ChaveDeAnkh {
         if (connection != null) {
             try {
                 String sqlQuery = resposta;
+                
+
                 PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
 
                 System.out.println("SQL Query: " + sqlQuery);
