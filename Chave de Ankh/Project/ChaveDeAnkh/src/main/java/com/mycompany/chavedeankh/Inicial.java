@@ -212,17 +212,13 @@ public class Inicial extends javax.swing.JFrame {
     usuario.setUsuario(jTextField2.getText());
     usuario.setSenha(jTextField3.getText());
     
-       boolean isDatabaseInfoFilled = !jTextField1.getText().isEmpty() && !jTextField2.getText().isEmpty() && !jTextField3.getText().isEmpty();
+    boolean isDatabaseInfoFilled = !jTextField1.getText().isEmpty() && !jTextField2.getText().isEmpty() && !jTextField3.getText().isEmpty();
 
     // Check if a file or a directory is selected
     if (selectedFile != null && selectedPaste != null) {
-        if (selectedFile != null) {
+        
             leitor.processFile(selectedFile);
-        }
-
-        if (selectedPaste != null) {
             leitor.processBank(selectedPaste);
-        }
 
         Tela telaDestino = new Tela(model, usuario);
         telaDestino.setVisible(true);

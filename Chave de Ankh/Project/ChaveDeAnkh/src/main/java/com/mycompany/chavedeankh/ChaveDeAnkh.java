@@ -18,21 +18,31 @@ public class ChaveDeAnkh {
             .build();
 
     public static void processarMensagem(String message, Tela tela, Usuario usuario) {
-        String schemaDefinition = """
-                                  Please respond only using SQL queries. Do not use natural language in your responses and do not use "```".  """ + leitor.bankh;
-
-        String resposta1 = model.generate(schemaDefinition + " " + message);
-        System.out.println("Resposta: " + resposta1);
-        String resposta = resposta1.replace("```", "");
-
         Conexao conexao = new Conexao(usuario);
         Connection connection = conexao.getConnection();
 
-        if (connection != null) {
-            try {
-                String sqlQuery = resposta;
-                
+        if (connection == null){
+            System.out.println("CONEXÃO É NULL");
+            String schemaDefinition = """
+            Here is a sql schema and database:  """ + leitor.bankh + leitor.pastas + """
+            Knowing the schema and database, answer the following question:""";
 
+            String resposta1 = model.generate(schemaDefinition + " " + message);
+            String resposta = resposta1.replace("```", "");
+            tela.exibirResultado(resposta); 
+    
+        }
+        
+        else {
+            System.out.println("CONEXÃO NÃO É NULL");
+            String schemaDefinition = """
+            Please respond only using SQL queries. Do not use natural language in your responses and do not use "```".  """ + leitor.bankh;
+
+            String resposta1 = model.generate(schemaDefinition + " " + message);
+            String resposta = resposta1.replace("```", "");
+            String sqlQuery = resposta;
+            
+            try {
                 PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
 
                 System.out.println("SQL Query: " + sqlQuery);
