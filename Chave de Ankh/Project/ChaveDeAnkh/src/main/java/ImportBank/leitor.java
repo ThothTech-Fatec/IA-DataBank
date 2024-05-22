@@ -12,7 +12,9 @@ import com.mycompany.chavedeankh.Inicial;
 
 public class leitor {
 public static String bankh = " ";
-    public static String ankh;
+public static String pastas = " ";
+public static String ankh;
+
 
     public static void main(String[] args) {
         // Aqui você pode chamar o método processFile e passar o arquivo selecionado como parâmetro
@@ -35,6 +37,22 @@ public static String bankh = " ";
             scanner.close();
         } catch (FileNotFoundException e) {
             // Tratando o caso em que o arquivo não é encontrado
+            System.out.println("O arquivo não foi encontrado: " + e.getMessage());
+        }
+    }
+    public static void processBank(File file) {
+        try {
+            Scanner scanner = new Scanner(file);
+
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                pastas = pastas + line + "\n";
+            }
+
+            scanner.close();
+            System.out.println("Conteúdo do arquivo " + file.getName() + ":\n" + pastas);
+
+        } catch (FileNotFoundException e) {
             System.out.println("O arquivo não foi encontrado: " + e.getMessage());
         }
     }

@@ -58,6 +58,7 @@ public class ChaveDeAnkh {
                 resultSet.close();
                 preparedStatement.close();
             } catch (SQLException e) {
+                tela.exibirResultado("Não foi possível realizar a consulta.");
                 e.printStackTrace();
             } finally {
                 conexao.closeConnection();
