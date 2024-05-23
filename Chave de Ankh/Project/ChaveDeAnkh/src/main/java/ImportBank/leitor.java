@@ -41,18 +41,21 @@ public static String ankh;
         }
     }
     public static void processBank(File file) {
-        try {
+         try {
+            // Criando um objeto Scanner para ler o arquivo
             Scanner scanner = new Scanner(file);
 
+            // Lendo o arquivo linha por linha e armazenando seu conteúdo na variável bankh
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 pastas = pastas + line + "\n";
             }
-
+           
+            
+            // Fechando o scanner após a leitura
             scanner.close();
-            System.out.println("Conteúdo do arquivo " + file.getName() + ":\n" + pastas);
-
         } catch (FileNotFoundException e) {
+            // Tratando o caso em que o arquivo não é encontrado
             System.out.println("O arquivo não foi encontrado: " + e.getMessage());
         }
     }

@@ -23,9 +23,28 @@ public class ChaveDeAnkh {
 
         if (connection == null){
             System.out.println("CONEXÃO É NULL");
+            String schemaDefinition = "Analyze this database dump: " + leitor.pastas + " Nthen there will be a question with the aim of performing a query on this dump, you must provide the answer to this query, and answer only the essential without including additional details, and the answer must be in Brazilian Portuguese:\n";
+            
+            System.out.println(schemaDefinition);
+            
+            String resposta1 = model.generate(schemaDefinition + " " + message);
+            
+            StringBuilder resultBuilder = new StringBuilder("Chave De Ankh:\n");
+            tela.exibirResultado(resposta1+"\n\n"); 
+            
+    
+        }
+        
+        else {
+            System.out.println("CONEXÃO NÃO É NULL");
             String schemaDefinition = """
-            Here is a sql schema and database:  """ + leitor.bankh + leitor.pastas + """
-            Knowing the schema and database, answer the following question:""";
+            Please respond only using SQL queries. Do not use natural language in your responses and do not use "```".  """ + leitor.bankh;
+
+            String resposta1 = model.generate(schemaDefinition + " " + message);
+            String resposta = resposta1.replace("```", "");
+            String sqlQuery = resposta;
+            
+            try {
 
             String resposta1 = model.generate(schemaDefinition + " " + message);
             String resposta = resposta1.replace("```", "");
