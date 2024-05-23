@@ -45,7 +45,6 @@ public class ChaveDeAnkh {
             String sqlQuery = resposta;
             
             try {
-
                 PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
 
                 System.out.println("SQL Query: " + sqlQuery);
