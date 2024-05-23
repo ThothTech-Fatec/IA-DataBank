@@ -45,6 +45,23 @@ public class ChaveDeAnkh {
             String sqlQuery = resposta;
             
             try {
+
+            String resposta1 = model.generate(schemaDefinition + " " + message);
+            String resposta = resposta1.replace("```", "");
+            tela.exibirResultado(resposta); 
+    
+        }
+        
+        else {
+            System.out.println("CONEXÃO NÃO É NULL");
+            String schemaDefinition = """
+            Please respond only using SQL queries. Do not use natural language in your responses and do not use "```".  """ + leitor.bankh;
+
+            String resposta1 = model.generate(schemaDefinition + " " + message);
+            String resposta = resposta1.replace("```", "");
+            String sqlQuery = resposta;
+            
+            try {
                 PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
 
                 System.out.println("SQL Query: " + sqlQuery);
