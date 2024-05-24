@@ -108,6 +108,12 @@
    <img align="left" title="vscode" height="30px" src="https://user-images.githubusercontent.com/76211125/227505063-5839c5e0-9524-41ff-9d24-ce6cbaf217a6.png"/>
    Visual Studio Code 
  </p>
+ 
+ * <p>
+   <img align="left" title="ollama" height="30px" src="https://ollama.com/public/assets/c889cc0d-cb83-4c46-a98e-0d0e273151b9/42f6b28d-9117-48cd-ac0d-44baaf5c178e.png"/>
+   &nbsp;Ollama
+ </p>
+
     
 ## 🎓TIME
 <span id="time" width="100%" height="auto">
