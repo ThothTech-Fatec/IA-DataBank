@@ -41,5 +41,23 @@ public Usuario (String bankname, String usuario, String senha){
     public void setSenha(String senha) {
         this.senha = senha;
     }
+    
+    public class AnotherClass {
+    static String comboBoxValue = "llama3";
+
+    public static void setComboBoxValue(String value) {
+        comboBoxValue = value;
+    }
+
+    public static String getComboBoxValue() {
+        return comboBoxValue;
+    }
+
+    public void useComboBoxValue() {
+        // Use o valor aqui
+        System.out.println("Valor do combo box: " + comboBoxValue);
+        // Outros códigos que utilizam comboBoxValue
+    }
+}
 }
 

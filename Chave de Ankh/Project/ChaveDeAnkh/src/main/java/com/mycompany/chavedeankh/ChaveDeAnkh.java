@@ -1,6 +1,7 @@
 package com.mycompany.chavedeankh;
 
 import ImportBank.leitor;
+import com.mycompany.chavedeankh.Usuario.AnotherClass;
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.ollama.OllamaChatModel;
 import java.sql.Connection;
@@ -13,7 +14,7 @@ public class ChaveDeAnkh {
 
     public static final ChatLanguageModel model = OllamaChatModel.builder()
             .baseUrl("http://localhost:11434/")
-            .modelName("llama3")
+            .modelName(AnotherClass.comboBoxValue)
             .temperature(0.8)
             .build();
 
