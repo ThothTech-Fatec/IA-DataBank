@@ -6,27 +6,26 @@ package com.mycompany.chavedeankh;
 
 /**
  *
- * @author Flavi
+ * @author Flavio
  */
 public class Usuario {
     String bankname;
     String usuario;
     String senha;
-  
-public Usuario(){}
 
-public Usuario (String bankname, String usuario, String senha){
-    this.bankname = bankname;
-    this.usuario = usuario;
-    this.senha = senha;
-}
+    public Usuario (String bankname, String usuario, String senha){
+        this.bankname = bankname;
+        this.usuario = usuario;
+        this.senha = senha;
+    }
+    Usuario() {}
+    
     public String getBankname(){
-        return bankname;
- }
+       return bankname;
+    }
     public String getUsuario() {
         return usuario;
     }
-
     public String getSenha() {
         return senha;
     }
@@ -41,23 +40,17 @@ public Usuario (String bankname, String usuario, String senha){
     public void setSenha(String senha) {
         this.senha = senha;
     }
-    
     public class AnotherClass {
-    static String comboBoxValue = "llama3";
-
-    public static void setComboBoxValue(String value) {
-        comboBoxValue = value;
+        static String comboBoxValue = "llama3";
+        public static void setComboBoxValue(String value) {
+            comboBoxValue = value;
+        }
+        public static String getComboBoxValue() {
+            return comboBoxValue;
+        }
+        public void useComboBoxValue() {
+            System.out.println("Valor do combo box: " + comboBoxValue);
+        }
     }
-
-    public static String getComboBoxValue() {
-        return comboBoxValue;
-    }
-
-    public void useComboBoxValue() {
-        // Use o valor aqui
-        System.out.println("Valor do combo box: " + comboBoxValue);
-        // Outros códigos que utilizam comboBoxValue
-    }
-}
 }
 
