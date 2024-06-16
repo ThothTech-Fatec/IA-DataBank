@@ -30,12 +30,8 @@ public class ChaveDeAnkh {
             
             String resposta1 = model.generate(schemaDefinition + " " + message);
             
-            StringBuilder resultBuilder = new StringBuilder("Chave De Ankh:\n");
             tela.exibirResultado(resposta1+"\n\n"); 
-            
-    
         }
-        
         else {
             System.out.println("CONEXÃO NÃO É NULL");
             String schemaDefinition = """
@@ -72,7 +68,6 @@ public class ChaveDeAnkh {
                 preparedStatement.close();
             } catch (SQLException e) {
                 tela.exibirResultado("Não foi possível realizar a consulta.");
-                e.printStackTrace();
             } finally {
                 conexao.closeConnection();
             }

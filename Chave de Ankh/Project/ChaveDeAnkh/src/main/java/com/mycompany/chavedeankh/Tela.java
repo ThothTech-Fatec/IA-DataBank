@@ -5,10 +5,7 @@
 package com.mycompany.chavedeankh;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import dev.langchain4j.model.chat.ChatLanguageModel;
-import dev.langchain4j.model.ollama.OllamaChatModel;
 import javax.swing.ImageIcon;
 import java.awt.*;
 import java.awt.Dimension;
@@ -16,43 +13,28 @@ import java.awt.Toolkit;
 
 /**
  *
- * @author conta
+ * @author ThothTech
  */
 public class Tela extends javax.swing.JFrame {
-
-    
-    /**
-     * Creates new form Tela_Ankh
-     */
-   
- 
-    private final ChatLanguageModel model; // Adicionando o campo model à classe Tela
+    // Adicionando o campo model à classe Tela
     private final Usuario usuario;
+    
     /**
      * Construtor da classe Tela.
      * @param model O modelo de linguagem de chat a ser utilizado.
+     * @param usuario
      */
+    
     public Tela(ChatLanguageModel model, Usuario usuario) {
-
-        this.model = model;
         this.usuario = usuario;
         initComponents();
-        
-        
-        
+
         // O Código abaixo foi desenvolvido por: Gustavo Braga, com o objetivo de centralizar as telas da aplicação em qualquer dispositivo.
-        
-        // Obtém o tamanho da tela
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-    
-        // Calcula as coordenadas x e y para centralizar a janela na tela
             int x = (screenSize.width - getWidth()) / 2;
             int y = (screenSize.height - getHeight()) / 2;
-    
         // Define a posição da janela
         setLocation(x, y);
-    
-        
 
         try {
             ImageIcon imageAnkh = new ImageIcon("ankh.png");
@@ -63,10 +45,8 @@ public class Tela extends javax.swing.JFrame {
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(this, "Erro ao carregar a imagem: " + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
         }
-        
     }
-       
-     
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -84,6 +64,7 @@ public class Tela extends javax.swing.JFrame {
         chatPanel = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -112,12 +93,21 @@ public class Tela extends javax.swing.JFrame {
         chatPanel.setRows(5);
         jScrollPane2.setViewportView(chatPanel);
 
+        jButton2.setText("Voltar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(351, 351, 351)
+                .addGap(17, 17, 17)
+                .addComponent(jButton2)
+                .addGap(259, 259, 259)
                 .addComponent(jLabel1)
                 .addGap(48, 48, 48)
                 .addComponent(jLabel4)
@@ -141,7 +131,9 @@ public class Tela extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton2))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -165,33 +157,30 @@ public class Tela extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     String message = jTextField2.getText();
-    chatPanel.append("Você: " + message + "\n"); // Adiciona a mensagem do usuário ao painel de chat
-    chatPanel.append("\n"); // Adiciona uma linha em branco para separar as mensagens
-    jTextField2.setText(""); // Limpa o campo de entrada
+    chatPanel.append("Você: " + message + "\n");
+    chatPanel.append("\n");
+    jTextField2.setText("");
 
-    // Chama o método que processa a mensagem após adicionar a mensagem do usuário
-    ChaveDeAnkh.processarMensagem(message, this, usuario); // Passando a instância da tela como segundo argumento
+    ChaveDeAnkh.processarMensagem(message, this, usuario);
 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Inicial telaDestino = new Inicial();
+        telaDestino.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
     public void exibirResultado(String resultado) {
     chatPanel.append(resultado);
     /**
      * @param args the command line arguments
      */
     }
-public static void main(String args[]) {
-    
-    java.awt.EventQueue.invokeLater(new Runnable() {
-        public void run() {
-                Usuario usuario = new Usuario(); // Inicialize o usuário conforme necessário
-                new Tela(ChaveDeAnkh.model, usuario).setVisible(true);
-            }
-    });
-}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea chatPanel;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
