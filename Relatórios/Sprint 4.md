@@ -68,6 +68,7 @@ Desenvolvemos uma interface para troca de IA, que inclui uma Dropdown para a sel
 
 
 ## 👓Sprint Review
+[Apresentação Sprint 4 ](https://github.com/user-attachments/files/15860009/Thoth.Tech.Sprint.4.2.pdf)
 
 
 
