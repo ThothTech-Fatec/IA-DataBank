@@ -65,9 +65,6 @@ Desenvolvemos uma interface para troca de IA, que inclui uma Dropdown para a sel
   <li>
     Pré-configuração de IAs
   </li>
-  <li>
-    Importação do Schema
-  </li>
 
 
 ## 👓Sprint Review
