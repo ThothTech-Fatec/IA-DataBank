@@ -59,9 +59,6 @@ Desenvolvemos uma interface para troca de IA, que inclui uma Dropdown para a sel
   <li>
     Interface de seleção de IA
   </li>
-  <li> 
-    Desativação de Opção de Dump de Banco de Dados
-  </li>
   <li>
     Pré-configuração de IAs
   </li>
