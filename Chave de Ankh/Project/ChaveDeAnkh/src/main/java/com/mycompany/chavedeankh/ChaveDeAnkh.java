@@ -30,7 +30,7 @@ public class ChaveDeAnkh {
             
             String resposta1 = model.generate(schemaDefinition + " " + message);
             
-            tela.exibirResultado(resposta1+"\n\n"); 
+            tela.exibirResultado("Chave De Ankh:\n \n" + resposta1+"\n\n"); 
         }
         else {
             System.out.println("CONEXÃO NÃO É NULL");
@@ -49,7 +49,7 @@ public class ChaveDeAnkh {
                 ResultSet resultSet = preparedStatement.executeQuery();
                 ResultSetMetaData metaData = resultSet.getMetaData();
                 int columnCount = metaData.getColumnCount();
-                StringBuilder resultBuilder = new StringBuilder("Chave De Ankh:\n");
+                StringBuilder resultBuilder = new StringBuilder("Chave De Ankh:\n \n");
 
                 if (!resultSet.next()) {
                     tela.exibirResultado("Não foi possível realizar a consulta. Nenhum resultado encontrado.");
@@ -67,7 +67,7 @@ public class ChaveDeAnkh {
                 resultSet.close();
                 preparedStatement.close();
             } catch (SQLException e) {
-                tela.exibirResultado("Não foi possível realizar a consulta.");
+                tela.exibirResultado("Não foi possível realizar a consulta.\n \n");
             } finally {
                 conexao.closeConnection();
             }
