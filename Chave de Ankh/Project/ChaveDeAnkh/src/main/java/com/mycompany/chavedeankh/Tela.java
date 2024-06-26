@@ -10,7 +10,11 @@ import javax.swing.ImageIcon;
 import java.awt.*;
 import java.awt.Dimension;
 import java.awt.Toolkit;
-
+import javax.swing.text.BadLocationException;
+import javax.swing.text.SimpleAttributeSet;
+import javax.swing.text.StyleConstants;
+import javax.swing.text.StyledDocument;
+import javax.swing.ImageIcon;
 /**
  *
  * @author ThothTech
@@ -18,6 +22,7 @@ import java.awt.Toolkit;
 public class Tela extends javax.swing.JFrame {
     // Adicionando o campo model à classe Tela
     private final Usuario usuario;
+    
     
     /**
      * Construtor da classe Tela.
@@ -35,16 +40,17 @@ public class Tela extends javax.swing.JFrame {
             int y = (screenSize.height - getHeight()) / 2;
         // Define a posição da janela
         setLocation(x, y);
-
-        try {
+        
+                try {
             ImageIcon imageAnkh = new ImageIcon("ankh.png");
             Image originalimageAnkh = imageAnkh.getImage();
             Image scaledimageAnkh = originalimageAnkh.getScaledInstance(40, 50, Image.SCALE_SMOOTH);
             ImageIcon scalediconAnkh = new ImageIcon(scaledimageAnkh);
-            jLabel4.setIcon(scalediconAnkh);
+            jLabel3.setIcon(scalediconAnkh);
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(this, "Erro ao carregar a imagem: " + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
         }
+
     }
 
     /**
@@ -60,11 +66,11 @@ public class Tela extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        chatPanel = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        chatPanel = new javax.swing.JTextPane();
+        jLabel3 = new javax.swing.JLabel();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -87,12 +93,6 @@ public class Tela extends javax.swing.JFrame {
             }
         });
 
-        chatPanel.setEditable(false);
-        chatPanel.setBackground(new java.awt.Color(255, 255, 255));
-        chatPanel.setColumns(20);
-        chatPanel.setRows(5);
-        jScrollPane2.setViewportView(chatPanel);
-
         jButton2.setText("Voltar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,52 +100,45 @@ public class Tela extends javax.swing.JFrame {
             }
         });
 
+        jScrollPane1.setViewportView(chatPanel);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(jButton2)
-                .addGap(259, 259, 259)
-                .addComponent(jLabel1)
-                .addGap(48, 48, 48)
-                .addComponent(jLabel4)
-                .addGap(87, 87, 87)
-                .addComponent(jLabel2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(88, Short.MAX_VALUE)
+                .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 730, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(89, 89, 89))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(249, 249, 249))))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton2))
+                .addContainerGap(41, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(128, 128, 128))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(6, 6, 6)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 439, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(3, 3, 3)
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         pack();
@@ -157,8 +150,8 @@ public class Tela extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     String message = jTextField2.getText();
-    chatPanel.append("Você: " + message + "\n");
-    chatPanel.append("\n");
+    appendMessage("Você: " + message, true);
+    appendMessage("", true);
     jTextField2.setText("");
 
     ChaveDeAnkh.processarMensagem(message, this, usuario);
@@ -170,22 +163,41 @@ public class Tela extends javax.swing.JFrame {
         telaDestino.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
-    public void exibirResultado(String resultado) {
-    chatPanel.append(resultado);
-    /**
-     * @param args the command line arguments
-     */
+public void exibirResultado(String resultado) {
+    appendMessage(resultado, false);
+}
+
+private void appendMessage(String message, boolean isUser) {
+    StyledDocument doc = chatPanel.getStyledDocument();
+    SimpleAttributeSet right = new SimpleAttributeSet();
+    SimpleAttributeSet left = new SimpleAttributeSet();
+    StyleConstants.setAlignment(right, StyleConstants.ALIGN_RIGHT);
+    StyleConstants.setAlignment(left, StyleConstants.ALIGN_LEFT);
+    StyleConstants.setForeground(left, Color.BLUE); // Cor para mensagens não do usuário
+    StyleConstants.setForeground(right, Color.BLACK); // Cor para mensagens do usuário
+
+    try {
+        if (isUser) {
+            doc.insertString(doc.getLength(), message + "\n", right);
+            doc.setParagraphAttributes(doc.getLength() - 1, 1, right, false);
+        } else {
+            doc.insertString(doc.getLength(), message + "\n", left);
+            doc.setParagraphAttributes(doc.getLength() - 1, 1, left, false);
+        }
+    } catch (BadLocationException e) {
+        e.printStackTrace();
     }
+}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextArea chatPanel;
+    private javax.swing.JTextPane chatPanel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }
